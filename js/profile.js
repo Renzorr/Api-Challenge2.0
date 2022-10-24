@@ -44,4 +44,17 @@ function render(data) {
   document.getElementById("container").innerHTML = profile;
 }
 
+function transition() {
+  setTimeout(() => {
+    document.querySelector("header").setAttribute("style", "left: 0");
+  }, 1000);
+
+  setTimeout(() => {
+    document
+      .querySelector(".container")
+      .setAttribute("style", "transform: translate(0%,0%);");
+  }, 2000);
+}
+
+transition();
 loadProfile();

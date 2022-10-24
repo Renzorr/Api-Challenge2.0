@@ -31,4 +31,18 @@ function render(data) {
   document.getElementById("container").innerHTML = repo;
 }
 
+function transition() {
+  setTimeout(() => {
+    document
+      .querySelector(".repos-container")
+      .setAttribute("style", "transform: translateX(0%);");
+  }, 2000);
+
+  setTimeout(() => {
+    document.querySelector("header").setAttribute("style", "left: 0");
+  }, 1000);
+}
+
+transition();
+
 loadRepos();

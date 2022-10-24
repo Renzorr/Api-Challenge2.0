@@ -1,0 +1,13 @@
+@media (hover: hover) {
+  a:hover {
+    --d: 100%;
+  }
+
+  .logo:hover .git-logo {
+    transform: rotate(360deg);
+  }
+
+  img:hover {
+    filter: saturate(150%);
+  }
+}

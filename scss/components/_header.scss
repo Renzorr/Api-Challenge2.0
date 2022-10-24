@@ -3,16 +3,26 @@ header {
   color: $txt-1;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
   padding-block: 1rem;
   position: fixed;
   top: 0;
-  left: 0;
+  left: -100%;
   width: 100%;
+  z-index: 1000;
+
+  .logo {
+    cursor: pointer;
+    .git-logo {
+      font-size: 30px;
+      transform: rotate(180deg);
+    }
+  }
 
   a {
     font-size: 1.6rem;
   }
+
   .items {
     display: flex;
     align-items: center;
@@ -34,21 +44,7 @@ header {
         font-size: 0.8rem;
         background: linear-gradient(currentColor 0 0) bottom / var(--d, 0) 1px
           no-repeat;
-        &:hover {
-          --d: 100%;
-        }
       }
-    }
-  }
-  #modes-section {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    font-size: 0.8rem;
-    cursor: pointer;
-
-    &:hover i {
-      transform: rotate(360deg);
     }
   }
 }
