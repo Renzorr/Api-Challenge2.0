@@ -1,0 +1,54 @@
+header {
+  background-color: $s-color;
+  color: $txt-1;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding-block: 1rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  a {
+    font-size: 1.6rem;
+  }
+  .items {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+
+    ul {
+      position: fixed;
+      width: 100%;
+      bottom: 0;
+      left: 0;
+      padding-block: 30px;
+      background-color: $s-color;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 100px;
+
+      a {
+        font-size: 0.8rem;
+        background: linear-gradient(currentColor 0 0) bottom / var(--d, 0) 1px
+          no-repeat;
+        &:hover {
+          --d: 100%;
+        }
+      }
+    }
+  }
+  #modes-section {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 0.8rem;
+    cursor: pointer;
+
+    &:hover i {
+      transform: rotate(360deg);
+    }
+  }
+}

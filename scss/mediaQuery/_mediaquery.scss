@@ -1,0 +1,55 @@
+@media (min-width: 700px) {
+  header {
+    .items {
+      ul {
+        position: relative;
+      }
+    }
+  }
+
+  .container {
+    max-width: 550px;
+
+    .profile {
+      gap: 50px;
+
+      width: 100%;
+      img {
+        width: 30%;
+        border-radius: 50%;
+      }
+
+      .profile-content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+
+        .profile-login {
+          font-size: 1rem;
+        }
+
+        .profile-name,
+        .profile-date {
+          font-size: 0.9rem;
+        }
+      }
+    }
+    .profile-details {
+      .details {
+        .type {
+          font-size: 0.87rem;
+        }
+      }
+    }
+  }
+
+  .repos {
+    max-width: 450px;
+    height: 170px;
+
+    .repo-name {
+      font-size: 1.2rem;
+    }
+  }
+}

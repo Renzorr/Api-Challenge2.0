@@ -1,0 +1,49 @@
+.main-repos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $p-color;
+  min-height: 100vh;
+  padding-block: 150px;
+}
+
+.repos-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding: 20px;
+  width: 100%;
+}
+.repos {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+  color: $txt-1;
+  padding: 20px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 350px;
+  background-color: $s-color;
+
+  .repo-name {
+    font-size: 1rem;
+  }
+
+  .repo-link,
+  .repo-language {
+    font-size: 0.7rem;
+  }
+
+  .repo-link {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    color: $txt-3;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

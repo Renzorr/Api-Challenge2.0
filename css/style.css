@@ -1,0 +1,274 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: 0.4s;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  max-inline-size: 100%;
+  block-size: auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  border: none;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+*::before,
+*::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+html {
+  font-size: 20px;
+}
+
+body {
+  font-family: "Space Mono", monospace;
+}
+
+header {
+  background-color: rgb(30, 43, 72);
+  color: #C9D1D9;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding-block: 1rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+header a {
+  font-size: 1.6rem;
+}
+header .items {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+header .items ul {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  padding-block: 30px;
+  background-color: rgb(30, 43, 72);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+}
+header .items ul a {
+  font-size: 0.8rem;
+  background: linear-gradient(currentColor 0 0) bottom/var(--d, 0) 1px no-repeat;
+}
+header .items ul a:hover {
+  --d: 100%;
+}
+header #modes-section {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+header #modes-section:hover i {
+  transform: rotate(360deg);
+}
+
+.main-profile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: rgb(20, 29, 46);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  width: 100%;
+  max-width: 350px;
+  border-radius: 0.5rem;
+  margin: 1rem;
+  padding: 0.8rem;
+  color: #C9D1D9;
+  background-color: rgb(30, 43, 72);
+}
+.container .profile {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+.container .profile img {
+  width: 30%;
+  border-radius: 50%;
+}
+.container .profile img:hover {
+  filter: saturate(150%);
+}
+.container .profile .profile-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 60%;
+}
+.container .profile .profile-content .profile-login {
+  font-size: 0.9rem;
+}
+.container .profile .profile-content .profile-name,
+.container .profile .profile-content .profile-date {
+  font-size: 0.7rem;
+}
+.container .profile .profile-content .profile-name {
+  color: rgb(48, 179, 219);
+}
+.container .profile-details {
+  background-color: rgb(20, 29, 46);
+  border-radius: 0.5rem;
+  display: flex;
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.container .profile-details .details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container .profile-details .details .type {
+  font-size: 0.7rem;
+}
+
+.main-repos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(20, 29, 46);
+  min-height: 100vh;
+  padding-block: 150px;
+}
+
+.repos-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding: 20px;
+  width: 100%;
+}
+
+.repos {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+  color: #C9D1D9;
+  padding: 20px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 350px;
+  background-color: rgb(30, 43, 72);
+}
+.repos .repo-name {
+  font-size: 1rem;
+}
+.repos .repo-link,
+.repos .repo-language {
+  font-size: 0.7rem;
+}
+.repos .repo-link {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  color: rgb(48, 179, 219);
+}
+.repos .repo-link:hover {
+  text-decoration: underline;
+}
+
+@media (min-width: 700px) {
+  header .items ul {
+    position: relative;
+  }
+  .container {
+    max-width: 550px;
+  }
+  .container .profile {
+    gap: 50px;
+    width: 100%;
+  }
+  .container .profile img {
+    width: 30%;
+    border-radius: 50%;
+  }
+  .container .profile .profile-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+  .container .profile .profile-content .profile-login {
+    font-size: 1rem;
+  }
+  .container .profile .profile-content .profile-name,
+.container .profile .profile-content .profile-date {
+    font-size: 0.9rem;
+  }
+  .container .profile-details .details .type {
+    font-size: 0.87rem;
+  }
+  .repos {
+    max-width: 450px;
+    height: 170px;
+  }
+  .repos .repo-name {
+    font-size: 1.2rem;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
