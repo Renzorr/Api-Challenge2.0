@@ -39,6 +39,9 @@ function transition() {
   }, 2000);
 
   setTimeout(() => {
+    document
+      .querySelector(".items-container")
+      .setAttribute("style", "left: 0; width: 100%");
     document.querySelector("header").setAttribute("style", "left: 0");
   }, 1000);
 }

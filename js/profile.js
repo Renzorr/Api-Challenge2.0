@@ -47,6 +47,9 @@ function render(data) {
 function transition() {
   setTimeout(() => {
     document.querySelector("header").setAttribute("style", "left: 0");
+    document
+      .querySelector(".items-container")
+      .setAttribute("style", "left: 0; width: 100%");
   }, 1000);
 
   setTimeout(() => {
