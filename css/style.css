@@ -225,6 +225,31 @@ header .items .items-container a {
   text-decoration: underline;
 }
 
+#new {
+  background-color: rgb(234, 83, 83);
+  color: #fff;
+  position: relative;
+  animation: animation 2s ease infinite alternate;
+}
+@keyframes animation {
+  0% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1.05);
+  }
+}
+#new .new-txt {
+  position: absolute;
+  font-size: 15px;
+  bottom: 10%;
+  right: 5%;
+  color: rgb(234, 83, 83);
+  background-color: #fff;
+  padding: 5px 10px;
+  border-radius: 15px;
+}
+
 @media (hover: hover) {
   a:hover {
     --d: 100%;

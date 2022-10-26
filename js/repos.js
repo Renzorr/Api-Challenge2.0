@@ -7,6 +7,15 @@ async function loadRepos() {
 
     if (response.status === 200) {
       const data = await response.json();
+
+      data.sort(function (a, b) {
+        if (a.id > b.id) {
+          return -1;
+        } else {
+          return true;
+        }
+      });
+
       console.log(data);
       render(data);
     } else {
@@ -19,14 +28,25 @@ async function loadRepos() {
 
 function render(data) {
   let repo = "";
-  data.forEach((repos) => {
-    repo += `   
-      <div class="repos">
-        <h1 class="repo-name">${repos.name}</h1>
-        <a href="${repos.html_url}" class="repo-link" target="_blank" ><i class="fa-sharp fa-solid fa-link"></i>Link</a>
-        <span class="repo-language">${repos.language}</span>
-      </div>`;
-  });
+
+  for (let i = 0; i < data.length; i++) {
+    if (i == 0) {
+      repo += `   
+    <div class="repos" id="new">
+      <h1 class="repo-name">${data[i].name}</h1>
+      <a href="${data[i].html_url}" class="repo-link" target="_blank" ><i class="fa-sharp fa-solid fa-link"></i>Link</a>
+      <span class="repo-language">${data[i].language}</span>
+      <span class="new-txt">NEW!</span>
+    </div>`;
+    }  
+      repo += `   
+    <div class="repos">
+      <h1 class="repo-name">${data[i].name}</h1>
+      <a href="${data[i].html_url}" class="repo-link" target="_blank" ><i class="fa-sharp fa-solid fa-link"></i>Link</a>
+      <span class="repo-language">${data[i].language}</span>
+    </div>`;
+    
+  }
 
   document.getElementById("container").innerHTML = repo;
 }

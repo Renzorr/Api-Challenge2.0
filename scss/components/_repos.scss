@@ -17,6 +17,7 @@
   width: 100%;
   transform: translateX(-300%);
 }
+
 .repos {
   display: flex;
   flex-direction: column;
@@ -46,5 +47,32 @@
     &:hover {
       text-decoration: underline;
     }
+  }
+}
+
+#new {
+  background-color: $new-color;
+  color: $new-txt;
+  position: relative;
+  animation: animation 2s ease infinite alternate;
+
+  @keyframes animation {
+    0% {
+      transform: scale(0.9);
+    }
+    100% {
+      transform: scale(1.05);
+    }
+  }
+
+  .new-txt {
+    position: absolute;
+    font-size: 15px;
+    bottom: 10%;
+    right: 5%;
+    color: $new-color;
+    background-color: $new-txt;
+    padding: 5px 10px ;
+    border-radius: 15px;
   }
 }
