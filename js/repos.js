@@ -30,22 +30,19 @@ function render(data) {
   let repo = "";
 
   for (let i = 0; i < data.length; i++) {
-    if (i == 0) {
-      repo += `   
-    <div class="repos" id="new">
+    if (data[i] == data[0]) {
+      repo = `<div class="repos" id="new" >
       <h1 class="repo-name">${data[i].name}</h1>
       <a href="${data[i].html_url}" class="repo-link" target="_blank" ><i class="fa-sharp fa-solid fa-link"></i>Link</a>
-      <span class="repo-language">${data[i].language}</span>
-      <span class="new-txt">NEW!</span>
-    </div>`;
-    }  
-      repo += `   
-    <div class="repos">
+      <span class="repo-language">${data[i].language}</span> 
+      <span class="new-txt">NEW!</span> 
+      </div>`;
+    } else {
+      repo += `<div class="repos" >
       <h1 class="repo-name">${data[i].name}</h1>
       <a href="${data[i].html_url}" class="repo-link" target="_blank" ><i class="fa-sharp fa-solid fa-link"></i>Link</a>
-      <span class="repo-language">${data[i].language}</span>
-    </div>`;
-    
+      <span class="repo-language">${data[i].language}</span> </div>`;
+    }
   }
 
   document.getElementById("container").innerHTML = repo;

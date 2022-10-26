@@ -129,7 +129,8 @@ header .items .items-container a {
   padding: 0.8rem;
   color: #C9D1D9;
   background-color: rgb(30, 43, 72);
-  transform: translate(-100%, -300%);
+  transform: translate(-300%, -300%);
+  transition: 0.8s;
 }
 .container .profile {
   display: flex;
@@ -251,6 +252,10 @@ header .items .items-container a {
 }
 
 @media (hover: hover) {
+  .container:hover {
+    rotate: y 360deg;
+    translate: 0 -30px;
+  }
   a:hover {
     --d: 100%;
   }

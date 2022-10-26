@@ -1,4 +1,9 @@
 @media (hover: hover) {
+  .container:hover {
+    rotate: y 360deg;
+    translate: 0 -30px;
+  }
+
   a:hover {
     --d: 100%;
   }

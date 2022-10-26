@@ -18,7 +18,8 @@
   padding: 0.8rem;
   color: $txt-1;
   background-color: $s-color;
-  transform: translate(-100%,-300%);
+  transform: translate(-300%, -300%);
+  transition: 0.8s;
 
   .profile {
     display: flex;
